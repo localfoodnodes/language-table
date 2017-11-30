@@ -167,7 +167,7 @@ class Parser
      */
     public function getLangs()
     {
-        return array_slice(scandir($this->langPath), 2);
+        return array_slice(scandir(base_path('resources/lang')), 2);
     }
 
     /**
