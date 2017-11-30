@@ -4,10 +4,6 @@ namespace LocalFoodNodes\LanguageTable;
 
 class Parser
 {
-    private $defaultLang = 'en';
-    private $langPath;
-    private $langs;
-
     /**
      * Init.
      *
@@ -47,8 +43,7 @@ class Parser
      */
     private function buildArray()
     {
-        $this->langPath = base_path('resources/lang');
-        $langs = $this->getLangs(); // Sort default lang first
+        $langs = $this->getLangs();
 
         $translations = [];
         foreach ($langs as $lang) {
@@ -90,7 +85,8 @@ class Parser
      * @param string $prefix
      * @return array
      */
-    private function flatten($array, $lang, $prefix = '') {
+    private function flatten($array, $lang, $prefix = '')
+    {
         $result = array();
 
         foreach ($array as $key => $value) {
@@ -146,7 +142,8 @@ class Parser
      * @param array $allLangs
      * @return array
      */
-    private function verifyAllLangs($translations, $allLangs) {
+    private function verifyAllLangs($translations, $allLangs)
+    {
         foreach ($translations as $file => $keys) {
             foreach ($keys as $key => $langs) {
                 if (count($langs) !== count($allLangs)) {
@@ -180,7 +177,8 @@ class Parser
      * @param array $results
      * @return array
      */
-    private function getFiles($dir, &$results = array()) {
+    private function getFiles($dir, &$results = array())
+    {
         $files = scandir($dir);
 
         foreach ($files as $key => $value) {
