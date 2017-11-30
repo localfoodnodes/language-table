@@ -1,0 +1,12 @@
+{
+    "name": "localfoodnodes/translation-coverage",
+    "authors": [
+        {
+            "name": "David Ajnered",
+            "email": "david@localfoodnodes.org",
+            "homepage": "https://localfoodnodes.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {}
+}
