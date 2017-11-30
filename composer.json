@@ -12,5 +12,10 @@
             "role": "Developer"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "LocalFoodNodes\\LanguageTable" : "src"
+        }
+    }
 }
