@@ -1,5 +1,9 @@
 {
-    "name": "localfoodnodes/translation-coverage",
+    "name": "localfoodnodes/language-table",
+    "description": "Visualize language file diffs in Laravel to help maintain translations in big projects.",
+    "keywords": ["language","locale","translations"],
+    "homepage": "https://github.com/localfoodnodes/language-table",
+    "license": "MIT",
     "authors": [
         {
             "name": "David Ajnered",
