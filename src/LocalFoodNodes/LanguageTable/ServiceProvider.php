@@ -21,6 +21,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        \Route::get('/admin/translations', 'LocalFoodNodes\LanguageTable\Controller@index');
+        //
     }
 }
