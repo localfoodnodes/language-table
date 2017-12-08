@@ -53,6 +53,7 @@ class Parser
             foreach ($langFiles as $langFile) {
                 $fileKey = str_replace($langPath, '', $langFile);
                 $fileKey = str_replace('.php', '', $fileKey);
+
                 if (!isset($translations[$fileKey])) {
                     $translations[$fileKey] = [];
                 }
@@ -183,9 +184,12 @@ class Parser
 
         foreach ($files as $key => $value) {
             $path = realpath($dir . '/' . $value);
-
             if (!is_dir($path)) {
-                $results[] = $path;
+                $pathinfo = pathinfo($path);
+
+                if ($pathinfo['extension'] === 'php') {
+                    $results[] = $path;
+                }
             } else if ($value != '.' && $value != '..') {
                 $this->getFiles($path, $results);
             }
